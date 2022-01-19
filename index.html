@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8"/>
+   <title>Stepping Stones</title>
+   <style type="text/css">
+      * {
+         font-family: "Proxima Nova", "Georgia", "Helvetica", sans-serif;
+         margin: 0;
+         padding: 0;
+      }
+      
+      #board {
+         border: thin solid deepskyblue;
+      }
+   </style>
+   <script type="text/javascript" src="ui.js"></script>
+   <script type="text/javascript" src="render.js"></script>
+   <script type="text/javascript" src="map.js"></script>
+   <script type="text/javascript" src="game.js"></script>
+   
+</head>
+<body onload="main();">
+   
+	<fieldset>
+		<legend>Controls</legend>
+		Debug: <input type="checkbox" id="debug_toggle" checked="checked">
+		FPS: <input type="checkbox" id="fps_toggle" checked="checked">
+		Objects: <input type="checkbox" id="object_count_toggle" checked="checked">
+      
+   </fieldset>
+</body>
+</html>
