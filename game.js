@@ -183,6 +183,18 @@ function move_disk_to_tile( disk, tile ) {
 
 	calculate_tile_values();
 	world.map.possible_tiles = [];
+
+	// while there is only 1 location, place the next white tile there
+	var current_white_disk_number = disk.number + 1;
+	var next_locations =  Object.keys(world.tile_values).filter( t => world.tile_values[t] == current_white_disk_number );
+	if( next_locations.length == 1 ) {
+		next_disk = world.map.disks.filter( d => d.number == current_white_disk_number )[0];
+		next_tile = world.map.tiles.filter( t => (t.loc.x + "_" + t.loc.y) == next_locations[0])[0];
+		console.log(next_disk, next_tile);
+		move_disk_to_tile( next_disk, next_tile );
+	}
+
+
 }
 
 function calculate_tile_values() {

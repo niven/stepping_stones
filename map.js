@@ -150,7 +150,7 @@ function process_tile_click( p ) {
       world.debug.map.lines.push( [p, t.center, "yellow" ] );
    });
 
-   // select the tile if we are within a circle with radius t from the center of the hex
+   // select the tile if we are within a circle with radius t from the center of the square
    // this means sometimes you select when you are just outside (but only if there are no adjacent tiles)
    if( closest_distance <= r ) {
       world.debug.map.highlight_tiles.push( closest_tile ); 
